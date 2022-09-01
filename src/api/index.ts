@@ -1,5 +1,9 @@
-import request from '@/utils/request'
+import request from '@/service/index'
 
-export async function getBannerList(): Promise<any> {
-  return request('/banner')
+export const getBannerList = (data?: any) => {
+  return request({
+    url: '/banner',
+    method: 'GET',
+    data
+  })
 }

@@ -3,7 +3,7 @@ module.exports = {
 	// 超过最大值换行
 	printWidth: 130,
 	// 缩进字节数
-	// tabWidth: 4,
+	tabWidth: 2,
 	// // 使用制表符而不是空格缩进行
 	// useTabs: true,
 	// 结尾不用分号(true有，false没有)
@@ -33,4 +33,5 @@ module.exports = {
 	// 这两个选项可用于格式化以给定字符偏移量（分别包括和不包括）开始和结束的代码
 	rangeStart: 0,
 	rangeEnd: Infinity,
-};
+  };
+  
