@@ -1,5 +1,5 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
-import { RootState } from '@/store'
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
+import type { RootState } from '@/store'
 interface InitialState {
   count: number
   text?: string
@@ -14,9 +14,9 @@ const initialState: InitialState = {
   text: '我是文字'
 }
 
-const promise_one: Promise<PromiseNum> = new Promise(res => {
+const promise_one: Promise<PromiseNum> = new Promise(function (resolve) {
   setTimeout(() => {
-    res({ number: 10 })
+    resolve({ number: 10 })
   }, 2000)
 })
 
@@ -45,18 +45,11 @@ export const countSlice = createSlice({
   },
   extraReducers: builder => {
     // 进行请求阶段的一些操作
-    builder.addCase(getAsyncInfo.pending, () => {
-      console.log('进行中')
-    })
+    builder.addCase(getAsyncInfo.pending, () => {})
     builder.addCase(getAsyncInfo.fulfilled, (state, action) => {
-      console.log('action.payload: ', action.payload) //{number:"10"}
-      console.log('state: ', state.text) //我是文字
       state.count += action.payload.number
-      console.log('成功')
     })
-    builder.addCase(getAsyncInfo.rejected, () => {
-      console.log('失败')
-    })
+    builder.addCase(getAsyncInfo.rejected, () => {})
   }
 })
 export const selectCount = (state: RootState) => state.counter.count

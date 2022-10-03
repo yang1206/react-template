@@ -1,6 +1,6 @@
-import axios, { AxiosResponse } from 'axios'
-import type { AxiosInstance, AxiosRequestConfig } from 'axios'
-import type { RequestConfig, RequestInterceptors, CancelRequestSource } from './types'
+import axios from 'axios'
+import type { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios'
+import type { CancelRequestSource, RequestConfig, RequestInterceptors } from './types'
 
 class Request {
   // axios 实例
@@ -52,6 +52,7 @@ class Request {
       (err: any) => err
     )
   }
+
   /**
    * @description: 获取指定 url 在 cancelRequestSourceList 中的索引
    * @param {string} url
@@ -62,18 +63,20 @@ class Request {
       return Object.keys(item)[0] === url
     }) as number
   }
+
   /**
    * @description: 删除 requestUrlList 和 cancelRequestSourceList
    * @param {string} url
    * @returns {*}
    */
   private delUrl(url: string) {
-    const urlIndex = this.requestUrlList?.findIndex(u => u === url)
+    const urlIndex = this.requestUrlList?.findIndex((u) => u === url)
     const sourceIndex = this.getSourceIndex(url)
     // 删除url和cancel方法
     urlIndex !== -1 && this.requestUrlList?.splice(urlIndex as number, 1)
     sourceIndex !== -1 && this.cancelRequestSourceList?.splice(sourceIndex as number, 1)
   }
+
   request<T>(config: RequestConfig<T>): Promise<T> {
     return new Promise((resolve, reject) => {
       // 如果我们为单个请求设置拦截器，这里使用单个请求的拦截器
@@ -85,7 +88,7 @@ class Request {
       if (url) {
         this.requestUrlList?.push(url)
         //  在axios0.22起，对CancelToken已经弃用，需要改成  AbortController 文档：https://axios-http.com/docs/cancellation
-        config.cancelToken = new axios.CancelToken(c => {
+        config.cancelToken = new axios.CancelToken((c) => {
           this.cancelRequestSourceList?.push({
             [url]: c
           })
@@ -93,7 +96,7 @@ class Request {
       }
       this.instance
         .request<any, T>(config)
-        .then(res => {
+        .then((res) => {
           // 如果我们为单个响应设置拦截器，这里使用单个响应的拦截器
           if (config.interceptors?.responseInterceptors) {
             res = config.interceptors.responseInterceptors(res)
@@ -109,6 +112,7 @@ class Request {
         })
     })
   }
+
   // 取消请求
   cancelRequest(url: string | string[]) {
     if (typeof url === 'string') {
@@ -117,15 +121,16 @@ class Request {
       sourceIndex >= 0 && this.cancelRequestSourceList?.[sourceIndex][url]()
     } else {
       // 存在多个需要取消请求的地址
-      url.forEach(u => {
+      url.forEach((u) => {
         const sourceIndex = this.getSourceIndex(u)
         sourceIndex >= 0 && this.cancelRequestSourceList?.[sourceIndex][u]()
       })
     }
   }
+
   // 取消全部请求
   cancelAllRequest() {
-    this.cancelRequestSourceList?.forEach(source => {
+    this.cancelRequestSourceList?.forEach((source) => {
       const key = Object.keys(source)[0]
       source[key]()
     })

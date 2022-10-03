@@ -1,3 +1,4 @@
+import React from 'react'
 import { HashRouter, NavLink } from 'react-router-dom'
 import Router from '@/routers'
 import './index.less'

@@ -1,9 +1,6 @@
+import type { AxiosRequestConfig, AxiosResponse } from 'axios'
 import Request from './request'
-import { AxiosResponse, AxiosRequestConfig } from 'axios'
 import type { RequestConfig } from './request/types'
-import { message } from 'antd'
-import NProgress from '@/config/nprogress'
-import { showFullScreenLoading, tryHideFullScreenLoading } from '@/config/serviceLoading'
 export interface IResponse<T> {
   [x: string]: any
   token: any
@@ -22,21 +19,13 @@ const request = new Request({
   interceptors: {
     // 请求拦截器
     requestInterceptors: (config: AxiosRequestConfig) => {
-      NProgress.start()
-      showFullScreenLoading()
       return config
     },
     // 响应拦截器
     responseInterceptors: (result: AxiosResponse) => {
-      tryHideFullScreenLoading()
-      NProgress.done()
       return result
     },
-    responseInterceptorsCatch: error => {
-      tryHideFullScreenLoading()
-      NProgress.done()
-      error.response && message.error(error.message)
-    }
+    responseInterceptorsCatch: () => {}
   }
 })
 

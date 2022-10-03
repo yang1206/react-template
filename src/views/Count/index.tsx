@@ -1,5 +1,5 @@
 import { useAppDispatch, useAppSelector } from '@/hooks/useStore'
-import { add, selectCount, getAsyncInfo } from '@/store/reducer/count'
+import { add, getAsyncInfo, selectCount } from '@/store/reducer/count'
 const Count = () => {
   const count = useAppSelector(selectCount)
   const dispatch = useAppDispatch()
