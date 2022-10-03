@@ -11,7 +11,7 @@ class Request {
   /*
   存放取消方法的集合
   * 在创建请求后将取消请求方法 push 到该集合中
-  * 封装一个方法，可以取消请求，传入 url: string|string[]  
+  * 封装一个方法，可以取消请求，传入 url: string|string[]
   * 在请求之前判断同一URL是否存在，如果存在就取消请求
   */
   cancelRequestSourceList?: CancelRequestSource[]
@@ -31,17 +31,17 @@ class Request {
     // 拦截器执行顺序 接口请求 -> 实例请求 -> 全局请求 -> 实例响应 -> 全局响应 -> 接口响应
     this.instance.interceptors.request.use(
       (res: AxiosRequestConfig) => res,
-      (err: any) => err
+      (err: any) => err,
     )
 
     // 使用实例拦截器
     this.instance.interceptors.request.use(
       this.interceptorsObj?.requestInterceptors,
-      this.interceptorsObj?.requestInterceptorsCatch
+      this.interceptorsObj?.requestInterceptorsCatch,
     )
     this.instance.interceptors.response.use(
       this.interceptorsObj?.responseInterceptors,
-      this.interceptorsObj?.responseInterceptorsCatch
+      this.interceptorsObj?.responseInterceptorsCatch,
     )
     // 全局响应拦截器保证最后执行
     this.instance.interceptors.response.use(
@@ -49,7 +49,7 @@ class Request {
       (res: AxiosResponse) => {
         return res.data
       },
-      (err: any) => err
+      (err: any) => err,
     )
   }
 
@@ -70,7 +70,7 @@ class Request {
    * @returns {*}
    */
   private delUrl(url: string) {
-    const urlIndex = this.requestUrlList?.findIndex((u) => u === url)
+    const urlIndex = this.requestUrlList?.findIndex(u => u === url)
     const sourceIndex = this.getSourceIndex(url)
     // 删除url和cancel方法
     urlIndex !== -1 && this.requestUrlList?.splice(urlIndex as number, 1)
@@ -80,9 +80,9 @@ class Request {
   request<T>(config: RequestConfig<T>): Promise<T> {
     return new Promise((resolve, reject) => {
       // 如果我们为单个请求设置拦截器，这里使用单个请求的拦截器
-      if (config.interceptors?.requestInterceptors) {
+      if (config.interceptors?.requestInterceptors)
         config = config.interceptors.requestInterceptors(config)
-      }
+
       const url = config.url
       // url存在保存取消请求方法和当前请求url
       if (url) {
@@ -90,7 +90,7 @@ class Request {
         //  在axios0.22起，对CancelToken已经弃用，需要改成  AbortController 文档：https://axios-http.com/docs/cancellation
         config.cancelToken = new axios.CancelToken((c) => {
           this.cancelRequestSourceList?.push({
-            [url]: c
+            [url]: c,
           })
         })
       }
@@ -98,9 +98,8 @@ class Request {
         .request<any, T>(config)
         .then((res) => {
           // 如果我们为单个响应设置拦截器，这里使用单个响应的拦截器
-          if (config.interceptors?.responseInterceptors) {
+          if (config.interceptors?.responseInterceptors)
             res = config.interceptors.responseInterceptors(res)
-          }
 
           resolve(res)
         })
@@ -119,7 +118,8 @@ class Request {
       // 取消单个请求
       const sourceIndex = this.getSourceIndex(url)
       sourceIndex >= 0 && this.cancelRequestSourceList?.[sourceIndex][url]()
-    } else {
+    }
+    else {
       // 存在多个需要取消请求的地址
       url.forEach((u) => {
         const sourceIndex = this.getSourceIndex(u)

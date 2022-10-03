@@ -5,11 +5,11 @@ import Home from '@/views/Home'
 const routes: RouteObject[] = [
   {
     path: '/',
-    element: <Home />
+    element: <Home />,
   },
   {
     path: '/count',
-    element: lazyLoad(lazy(() => import('@/views/Count')))
-  }
+    element: lazyLoad(lazy(() => import('@/views/Count'))),
+  },
 ]
 export default routes

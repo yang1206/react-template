@@ -25,8 +25,8 @@ const request = new Request({
     responseInterceptors: (result: AxiosResponse) => {
       return result
     },
-    responseInterceptorsCatch: () => {}
-  }
+    responseInterceptorsCatch: () => {},
+  },
 })
 
 /**
@@ -38,9 +38,9 @@ const request = new Request({
  */
 const HttpRequest = <D = any, T = any>(config: HttpRequestConfig<D, T>): Promise<any> => {
   const { method = 'GET' } = config
-  if (method === 'get' || method === 'GET') {
+  if (method === 'get' || method === 'GET')
     config.params = config.data
-  }
+
   return request.request<IResponse<T>>(config)
 }
 // 取消请求

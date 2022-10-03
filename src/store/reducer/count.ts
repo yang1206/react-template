@@ -11,10 +11,10 @@ interface PromiseNum {
 
 const initialState: InitialState = {
   count: +0,
-  text: '我是文字'
+  text: '我是文字',
 }
 
-const promise_one: Promise<PromiseNum> = new Promise(function (resolve) {
+const promise_one: Promise<PromiseNum> = new Promise((resolve) => {
   setTimeout(() => {
     resolve({ number: 10 })
   }, 2000)
@@ -41,16 +41,16 @@ export const countSlice = createSlice({
     },
     back: (state: InitialState) => {
       state.text = '我是文字'
-    }
+    },
   },
-  extraReducers: builder => {
+  extraReducers: (builder) => {
     // 进行请求阶段的一些操作
     builder.addCase(getAsyncInfo.pending, () => {})
     builder.addCase(getAsyncInfo.fulfilled, (state, action) => {
       state.count += action.payload.number
     })
     builder.addCase(getAsyncInfo.rejected, () => {})
-  }
+  },
 })
 export const selectCount = (state: RootState) => state.counter.count
 export const { add, minus, change, back } = countSlice.actions

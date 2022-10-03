@@ -1,7 +1,6 @@
 // @see: http://eslint.cn
 {
 	"extends": [
-		"@antfu",
-		"plugin:prettier/recommended"
+		"@antfu"
 	]
 }
