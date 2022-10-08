@@ -2,8 +2,7 @@ import type { AxiosRequestConfig, AxiosResponse } from 'axios'
 import Request from './request'
 import type { RequestConfig } from './request/types'
 export interface IResponse<T> {
-  code: number
-  data: T
+  [x: string]: T
 }
 // 重写返回类型
 interface HttpRequestConfig<T, R> extends RequestConfig<IResponse<R>> {
