@@ -1,7 +1,7 @@
 import React from 'react'
 import { HashRouter, NavLink } from 'react-router-dom'
 import Router from '@/routers'
-import './index.less'
+import './index.css'
 const Layout = () => {
   return (
     <HashRouter>

@@ -1,6 +1,6 @@
 import { useAppSelector } from '@/hooks/useStore'
 import { selectCount } from '@/store/reducer/count'
-import './index.less'
+import './index.css'
 const Home = () => {
   const count = useAppSelector(selectCount)
   return (
