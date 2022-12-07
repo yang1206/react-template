@@ -1,6 +1,6 @@
 // @see: http://eslint.cn
 {
 	"extends": [
-		"@antfu"
+		"@antfu/eslint-config-react"
 	]
 }
