@@ -1,7 +1,7 @@
 # React 项目模板
 
 ### 介绍
-🚀🚀🚀 一个 React18 + TS + Vite + Redux-toolkit 开箱即用的项目模板。
+🚀🚀🚀 一个 React18 + TS + Vite + Zustand 开箱即用的项目模板。
 
 ### Features
 
@@ -13,7 +13,7 @@
 
 <!-- - 🎨 [UnoCSS](https://github.com/antfu/unocss) - the instant on-demand atomic CSS engine -->
 
-<!-- - 😃 [Use icons from any icon sets with classes](https://github.com/antfu/unocss/tree/main/packages/preset-icons) -->
+- 🐻 [State Management via Zustand](https://github.com/pmndrs/zustand)
 
 
 - 📥 [APIs auto importing](https://github.com/antfu/unplugin-auto-import) - use Composition API and others directly
