@@ -1,24 +1,18 @@
-import { useAppDispatch, useAppSelector } from '@/hooks/useStore'
-import { add, getAsyncInfo, selectCount } from '@/store/reducer/count'
+import { useCountStore } from '@/store'
 const Count = () => {
-  const count = useAppSelector(selectCount)
-  const dispatch = useAppDispatch()
+  const { count, inc, asyncInc } = useCountStore()
   return (
     <div>
       <div style={{ textAlign: 'center' }}>当前的Count：{count}</div>
       <button
-        onClick={() => {
-          dispatch(add())
-        }}
+        onClick={inc}
       >
         加1
       </button>
       <button
-        onClick={() => {
-          dispatch(getAsyncInfo())
-        }}
+        onClick={asyncInc}
       >
-        异步加10
+        异步加1
       </button>
     </div>
   )

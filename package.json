@@ -13,23 +13,22 @@
     "commit": "git pull && git add -A && git-cz && git push"
   },
   "dependencies": {
-    "@reduxjs/toolkit": "^1.9.1",
     "axios": "^0.27.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-redux": "^8.0.5",
-    "react-router-dom": "^6.4.5"
+    "react-router-dom": "^6.4.5",
+    "zustand": "^4.1.5"
   },
   "devDependencies": {
     "@antfu/eslint-config-react": "^0.33.1",
     "@commitlint/cli": "^17.3.0",
     "@commitlint/config-conventional": "^17.3.0",
-    "@types/node": "^18.11.12",
+    "@types/node": "^18.11.13",
     "@types/react": "^18.0.26",
     "@types/react-dom": "^18.0.9",
     "@vitejs/plugin-react-swc": "^3.0.0",
     "commitizen": "^4.2.6",
-    "cz-git": "^1.4.0",
+    "cz-git": "^1.4.1",
     "eslint": "^8.29.0",
     "eslint-plugin-react": "^7.31.11",
     "eslint-plugin-react-hooks": "^4.6.0",

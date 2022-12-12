@@ -11,8 +11,6 @@
     "lazy": true,
     "memo": true,
     "startTransition": true,
-    "useAppDispatch": true,
-    "useAppSelector": true,
     "useCallback": true,
     "useContext": true,
     "useDebugValue": true,
