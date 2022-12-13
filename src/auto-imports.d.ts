@@ -14,6 +14,8 @@ declare global {
   const startTransition: typeof import('react')['startTransition']
   const useCallback: typeof import('react')['useCallback']
   const useContext: typeof import('react')['useContext']
+  const useDark: typeof import('./hooks/useDark')['useDark']
+  const useDarkMode: typeof import('usehooks-ts')['useDarkMode']
   const useDebugValue: typeof import('react')['useDebugValue']
   const useDeferredValue: typeof import('react')['useDeferredValue']
   const useEffect: typeof import('react')['useEffect']

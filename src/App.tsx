@@ -1,11 +1,17 @@
-import React from 'react'
+import {
+  QueryClient,
+  QueryClientProvider,
+} from '@tanstack/react-query'
 import Layout from '@/layouts'
-import '@/assets/css/App.css'
 const App = () => {
+  const queryClient = new QueryClient()
   return (
-    <div className="app">
+    <QueryClientProvider client={queryClient}>
+      <main className="font-sans px-4 py-10 text-center text-gray-700 dark:text-gray-200">
       <Layout></Layout>
-    </div>
+    </main>
+    </QueryClientProvider>
+
   )
 }
 export default App

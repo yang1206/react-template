@@ -1,16 +1,18 @@
-import React from 'react'
-import { HashRouter, NavLink } from 'react-router-dom'
+import { BrowserRouter, NavLink } from 'react-router-dom'
+import Footer from '@/components/Footer'
 import Router from '@/routers'
-import './index.css'
 const Layout = () => {
   return (
-    <HashRouter>
-      <div className="header">
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/count">Count</NavLink>
-      </div>
-      <Router />
-    </HashRouter>
+    <>
+      <BrowserRouter>
+        <div className="flex gap-3 justify-center">
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="/count">Count</NavLink>
+        </div>
+        <Router />
+      </BrowserRouter>
+      <Footer />
+    </>
   )
 }
 export default Layout

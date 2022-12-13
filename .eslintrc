@@ -1,6 +1,0 @@
-// @see: http://eslint.cn
-{
-	"extends": [
-		"@antfu/eslint-config-react"
-	]
-}

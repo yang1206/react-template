@@ -1,15 +1,14 @@
-import React, { lazy } from 'react'
+import { lazy } from 'react'
 import type { RouteObject } from '@/routers/interface'
 import lazyLoad from '@/routers/utils/lazyLoad'
-import Home from '@/views/Home'
 const routes: RouteObject[] = [
   {
     path: '/',
-    element: <Home />,
+    element: lazyLoad(lazy(() => import('@/pages/Home'))),
   },
   {
     path: '/count',
-    element: lazyLoad(lazy(() => import('@/views/Count'))),
+    element: lazyLoad(lazy(() => import('@/pages/Count'))),
   },
 ]
 export default routes

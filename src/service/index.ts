@@ -1,17 +1,14 @@
 import type { AxiosRequestConfig, AxiosResponse } from 'axios'
 import Request from './request'
 import type { RequestConfig } from './request/types'
-export interface IResponse<T> {
-  [x: string]: T
-}
 // 重写返回类型
-interface HttpRequestConfig<T, R> extends RequestConfig<IResponse<R>> {
+interface HttpRequestConfig<T, R> extends RequestConfig<R> {
   data?: T
 }
 const request = new Request({
   baseURL: import.meta.env.VITE_API_URL,
   timeout: 1000 * 60 * 4,
-  withCredentials: true,
+  withCredentials: false,
   interceptors: {
     // 请求拦截器
     requestInterceptors: (config: AxiosRequestConfig) => {
@@ -37,7 +34,7 @@ const HttpRequest = <D = any, T = any>(config: HttpRequestConfig<D, T>) => {
   if (method === 'get' || method === 'GET')
     config.params = config.data
 
-  return request.request<IResponse<T>>(config)
+  return request.request<T>(config)
 }
 // 取消请求
 export const cancelRequest = (url: string | string[]) => {

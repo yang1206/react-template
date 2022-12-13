@@ -1,7 +1,6 @@
-# React 项目模板
+🚀🚀🚀 react starter template
 
-### 介绍
-🚀🚀🚀 一个 React18 + TS + Vite + Zustand 开箱即用的项目模板。
+Inspired by [Vitesse](https://github.com/antfu/vitesse) ❤
 
 ### Features
 
@@ -11,8 +10,9 @@
 - 📑 [Layout system](./src/layouts)
 
 
-<!-- - 🎨 [UnoCSS](https://github.com/antfu/unocss) - the instant on-demand atomic CSS engine -->
-
+- 🎨 [UnoCSS](https://github.com/antfu/unocss) - the instant on-demand atomic CSS engine
+- 😃 [Use icons from any icon sets with classes](https://github.com/antfu/unocss/tree/main/packages/preset-icons)
+  
 - 🐻 [State Management via Zustand](https://github.com/pmndrs/zustand)
 
 

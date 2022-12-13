@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react'
-
+import NProgress from '@/components/NProgress'
 /**
  * @description 路由懒加载
  * @param {Element} Comp 需要访问的组件
@@ -7,7 +7,7 @@ import React, { Suspense } from 'react'
  */
 const lazyLoad = (Comp: React.LazyExoticComponent<any>): React.ReactNode => {
   return (
-    <Suspense fallback={<>...加载中</>}>
+    <Suspense fallback={<NProgress />}>
       <Comp />
     </Suspense>
   )
