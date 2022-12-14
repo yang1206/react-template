@@ -1,5 +1,5 @@
 import { resolve } from 'path'
-import { defineConfig } from 'vite'
+import { defineConfig } from 'vitest/config'
 import react from '@vitejs/plugin-react-swc'
 import Unocss from 'unocss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
@@ -38,5 +38,8 @@ export default defineConfig({
     alias: {
       '@': resolve(__dirname, './src'),
     },
+  },
+  test: {
+    environment: 'jsdom',
   },
 })

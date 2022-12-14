@@ -22,9 +22,9 @@ Inspired by [Vitesse](https://github.com/antfu/vitesse) ❤
 
 - 🦾 TypeScript, of course
 
-<!-- - ⚙️ Unit Testing with [Vitest](https://github.com/vitest-dev/vitest), E2E Testing with [Cypress](https://cypress.io/) on [GitHub Actions](https://github.com/features/actions) -->
+- ⚙️ Unit Testing with [Vitest](https://github.com/vitest-dev/vitest)
 
-<!-- - ☁️ Deploy on Netlify, zero-config -->
+- ☁️ Deploy on Netlify, zero-config
 
 <br>
 
