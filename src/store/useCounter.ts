@@ -5,7 +5,7 @@ export interface CountState {
   count: number
   inc: () => void
   dec: () => void
-  asyncInc: () => void
+  asyncInc: () => Promise<void>
 }
 export const useCountStore = create<CountState>()(
   devtools(
@@ -14,7 +14,7 @@ export const useCountStore = create<CountState>()(
         count: 0,
         inc: () => set(state => ({ count: state.count + 1 })),
         dec: () => set(state => ({ count: state.count - 1 })),
-        asyncInc: () => {
+        asyncInc: async () => {
           setTimeout(() => {
             get().inc()
           }, 300)
