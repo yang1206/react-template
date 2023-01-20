@@ -1,4 +1,4 @@
-import type { AxiosRequestConfig, AxiosResponse } from 'axios'
+import type { AxiosResponse, RawAxiosRequestConfig } from 'axios'
 import Request from './request'
 import type { RequestConfig } from './request/types'
 // 重写返回类型
@@ -11,7 +11,7 @@ const request = new Request({
   withCredentials: false,
   interceptors: {
     // 请求拦截器
-    requestInterceptors: (config: AxiosRequestConfig) => {
+    requestInterceptors: (config: RawAxiosRequestConfig) => {
       return config
     },
     // 响应拦截器

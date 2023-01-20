@@ -36,7 +36,7 @@ class Request {
 
     // 使用实例拦截器
     this.instance.interceptors.request.use(
-      this.interceptorsObj?.requestInterceptors,
+      this.interceptorsObj?.requestInterceptors as unknown as ((value: AxiosRequestConfig<any>) => AxiosRequestConfig<any> | Promise<AxiosRequestConfig<any>>),
       this.interceptorsObj?.requestInterceptorsCatch,
     )
     this.instance.interceptors.response.use(
