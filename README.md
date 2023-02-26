@@ -50,5 +50,5 @@ pnpm  build
 
 ## Variations
 
-- [vue-template]('https://github.com/yang1206/vue-template.git')
-- [uniapp-template]('https://github.com/yang1206/uniapp-template.git')
+- [vue-template](https://github.com/yang1206/vue-template.git)
+- [uniapp-template](https://github.com/yang1206/uniapp-template.git)
