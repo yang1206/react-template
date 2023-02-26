@@ -1,4 +1,4 @@
-import create from 'zustand'
+import { create } from 'zustand'
 import { devtools, persist } from 'zustand/middleware'
 
 export interface CountState {
@@ -26,4 +26,3 @@ export const useCountStore = create<CountState>()(
     ),
   ),
 )
-
