@@ -3,6 +3,11 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
+  "author": "Yang1206 <https://github.com/yang1206>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yang1206/react-template.git"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -28,6 +33,7 @@
     "@commitlint/cli": "^17.4.4",
     "@commitlint/config-conventional": "^17.4.4",
     "@iconify-json/carbon": "^1.1.16",
+    "@iconify-json/line-md": "^1.1.23",
     "@testing-library/react": "^14.0.0",
     "@types/node": "^18.14.1",
     "@types/nprogress": "^0.2.0",
@@ -37,7 +43,7 @@
     "@vitejs/plugin-react-swc": "^3.2.0",
     "commitizen": "^4.3.0",
     "cz-git": "^1.5.0",
-    "eslint": "^8.34.0",
+    "eslint": "^8.35.0",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "husky": "^8.0.3",

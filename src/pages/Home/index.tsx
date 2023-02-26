@@ -7,8 +7,8 @@ const Content = () => {
     <div className="home">
       <div className="i-carbon-campsite text-4xl inline-block" />
       <p>
-        <a rel="noreferrer" href="https://github.com/antfu/vitesse-lite" target="_blank">
-          Vitesse Lite
+        <a rel="noreferrer" href="https://github.com/yang1206/react-template" target="_blank">
+          Vitesse Lite for React
         </a>
       </p>
       <p>
@@ -34,4 +34,3 @@ const Home = () => {
   )
 }
 export default Home
-

@@ -1,45 +1,49 @@
-import { resolve } from 'path'
+import type { ConfigEnv } from 'vitest/config'
 import { defineConfig } from 'vitest/config'
-import react from '@vitejs/plugin-react-swc'
-import Unocss from 'unocss/vite'
-import AutoImport from 'unplugin-auto-import/vite'
+import { loadEnv } from 'vite'
+import { createViteProxy } from './build/config'
+import { setupVitePlugins } from './build/plugins'
+import { convertEnv, getRootPath, getSrcPath } from './build/utils'
 // https://vitejs.dev/config/
-export default defineConfig({
-  plugins: [
-    react(),
-    Unocss(),
-    AutoImport({
-      imports: ['react', 'react-router-dom', { 'usehooks-ts': ['useDarkMode'] }],
-      dts: './src/auto-imports.d.ts',
-      dirs: ['src/hooks'],
-      // eslintrc: {
-      //   enabled: true,
-      // },
-      defaultExportByFilename: true,
-    }),
-  ],
-  server: {
-    host: true, // host设置为true才可以使用network的形式，以ip访问项目
-    port: 1206, // 端口号
-    open: false, // 自动打开浏览器
-    cors: true, // 跨域设置允许
-    strictPort: false, // 如果端口已占用直接退出
-    // 接口代理
-    // proxy: {
-    //   '/api': {
-    //     // 本地 8000 前端代码的接口 代理到 8888 的服务端口
-    //     target: 'http://123.207.32.32:9001/',
-    //     changeOrigin: true, // 允许跨域
-    //     rewrite: (path) => path.replace('/api/', '/'),
-    //   },
-    // },
-  },
-  resolve: {
-    alias: {
-      '@': resolve(__dirname, './src'),
+export default defineConfig((configEnv: ConfigEnv) => {
+  const srcPath = getSrcPath()
+  const rootPath = getRootPath()
+  const isBuild = configEnv.command === 'build'
+  const viteEnv = convertEnv(loadEnv(configEnv.mode, process.cwd()))
+  const { VITE_PORT, VITE_USE_PROXY, VITE_PROXY_TYPE } = viteEnv
+  return {
+    plugins: setupVitePlugins(viteEnv, isBuild),
+    server: {
+      host: '0.0.0.0',
+      port: VITE_PORT,
+      open: false,
+      proxy: createViteProxy(VITE_USE_PROXY, VITE_PROXY_TYPE as ProxyType),
     },
-  },
-  test: {
-    environment: 'jsdom',
-  },
+    build: {
+      reportCompressedSize: false,
+      sourcemap: false,
+      chunkSizeWarningLimit: 1024, // chunk 大小警告的限制（单位kb）
+      commonjsOptions: {
+        ignoreTryCatch: false,
+      },
+      terserOptions: {
+        // detail to look https://terser.org/docs/api-reference#compress-options
+        compress: {
+          drop_console: false,
+          pure_funcs: ['console.log', 'console.info'],
+          drop_debugger: true,
+        },
+      },
+
+    },
+    resolve: {
+      alias: {
+        '~': rootPath,
+        '@': srcPath,
+      },
+    },
+    test: {
+      environment: 'jsdom',
+    },
+  }
 })
