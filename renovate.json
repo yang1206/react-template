@@ -1,7 +1,21 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "config:base",
-    ":dependencyDashboard"
+    ":automergePatch",
+    ":automergeTypes",
+    ":automergeTesters",
+    ":automergeLinters",
+    ":rebaseStalePrs",
+    ":semanticCommits"
+  ],
+  "packageRules": [
+    {
+      "updateTypes": [
+        "major"
+      ],
+      "labels": [
+        "UPDATE-MAJOR"
+      ]
+    }
   ]
 }
