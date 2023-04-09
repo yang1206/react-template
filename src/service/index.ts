@@ -29,7 +29,7 @@ const request = new Request({
  * @param {HttpRequestConfig} config 不管是GET还是POST请求都使用data
  * @returns {Promise}
  */
-const HttpRequest = <D = any, T = any>(config: HttpRequestConfig<D, T>) => {
+function HttpRequest<D = any, T = any>(config: HttpRequestConfig<D, T>) {
   const { method = 'GET' } = config
   if (method === 'get' || method === 'GET')
     config.params = config.data
@@ -37,11 +37,11 @@ const HttpRequest = <D = any, T = any>(config: HttpRequestConfig<D, T>) => {
   return request.request<T>(config)
 }
 // 取消请求
-export const cancelRequest = (url: string | string[]) => {
+export function cancelRequest(url: string | string[]) {
   return request.cancelRequest(url)
 }
 // 取消全部请求
-export const cancelAllRequest = () => {
+export function cancelAllRequest() {
   return request.cancelAllRequest()
 }
 

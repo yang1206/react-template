@@ -4,6 +4,9 @@ import {
   presetIcons,
   presetUno,
   presetWebFonts,
+  transformerAttributifyJsx,
+  transformerDirectives,
+  transformerVariantGroup,
   // transformerDirectives,
   // transformerVariantGroup,
 } from 'unocss'
@@ -28,8 +31,9 @@ export default defineConfig({
       },
     }),
   ],
-  // transformers: [
-  //   transformerDirectives(),
-  //   transformerVariantGroup(),
-  // ],
+  transformers: [
+    transformerDirectives(),
+    transformerVariantGroup(),
+    transformerAttributifyJsx(),
+  ],
 })
