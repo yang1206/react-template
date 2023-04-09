@@ -40,7 +40,7 @@
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "@unocss/eslint-config": "^0.50.2",
-    "@unocss/reset": "^0.50.2",
+    "@unocss/reset": "^0.51.0",
     "@vitejs/plugin-react-swc": "^3.2.0",
     "commitizen": "^4.3.0",
     "cz-git": "^1.5.0",
