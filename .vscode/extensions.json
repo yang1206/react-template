@@ -1,7 +1,7 @@
 {
-	"recommendations": [
-		"dsznajder.es7-react-js-snippets",
-		"dbaeumer.vscode-eslint",
-		"antfu.unocss"
-	]
+  "recommendations": [
+    "dsznajder.es7-react-js-snippets",
+    "dbaeumer.vscode-eslint",
+    "antfu.unocss"
+  ]
 }
