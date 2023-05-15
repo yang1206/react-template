@@ -1,6 +1,7 @@
 import type { AxiosRequestConfig, AxiosResponse } from 'axios'
 import Request from './request'
 import type { RequestConfig } from './request/types'
+
 // 重写返回类型
 interface HttpRequestConfig<T, R> extends RequestConfig<R> {
   data?: T

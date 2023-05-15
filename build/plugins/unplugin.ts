@@ -1,6 +1,7 @@
-import { resolve } from 'path'
+import { resolve } from 'node:path'
 import AutoImport from 'unplugin-auto-import/vite'
 import { getRootPath, getSrcPath } from '../utils'
+
 export default [
   AutoImport({
     imports: ['react', 'react-router-dom', { 'usehooks-ts': ['useDarkMode'] }],

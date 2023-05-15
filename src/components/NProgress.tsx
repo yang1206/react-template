@@ -6,7 +6,9 @@ const NProgress: React.FC = () => {
   useEffect(() => {
     nprogress.start()
     return () => {
-      nprogress.done()
+      setTimeout(() => {
+        nprogress.done()
+      }, 200)
     }
   }, [])
   return (

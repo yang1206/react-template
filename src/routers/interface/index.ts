@@ -1,4 +1,5 @@
 import type { RouteObject as Routes } from 'react-router-dom'
+
 export interface MetaProps {
   keepAlive?: boolean
   requiresAuth?: boolean

@@ -13,7 +13,8 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "test": "vitest",
-    "lint:eslint": "eslint --fix --ext .js,.ts,.tsx,./src",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "lint:lint-staged": "lint-staged",
     "prepare": "husky install",
     "commit": "git pull && git add -A && git-cz && git push"

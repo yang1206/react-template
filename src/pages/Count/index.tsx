@@ -1,17 +1,18 @@
 import { useCountStore } from '@/store'
-const Count = () => {
+
+function Count() {
   const { count, inc, dec } = useCountStore()
   return (
     <div>
       <p className="font-semibold">{count}</p>
       <button
-        className="btn m-4 h-8 w-8 rounded-full text-center"
+        className="m-4 h-8 w-8 rounded-full text-center btn"
         onClick={inc}
       >
         +
       </button>
       <button
-        className="btn m-4 h-8 w-8 rounded-full text-center"
+        className="m-4 h-8 w-8 rounded-full text-center btn"
         onClick={dec}
       >
         -

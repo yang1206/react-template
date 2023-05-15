@@ -1,11 +1,12 @@
 import { useQuery } from '@tanstack/react-query'
 import { useCountStore } from '@/store'
 import { getGithub } from '@/api'
-const Content = () => {
+
+function Content() {
   const { count } = useCountStore()
   return (
     <div className="home">
-      <div className="i-carbon-campsite text-4xl inline-block" />
+      <div className="i-carbon-campsite inline-block text-4xl" />
       <p>
         <a rel="noreferrer" href="https://github.com/yang1206/react-template" target="_blank">
           Vitesse Lite for React
@@ -21,7 +22,7 @@ const Content = () => {
     </div>
   )
 }
-const Home = () => {
+function Home() {
   const { data, isLoading } = useQuery(['git'], getGithub)
   if (isLoading)
     return <div>Loading...</div>
