@@ -7,7 +7,7 @@ interface HttpRequestConfig<T, R> extends RequestConfig<R> {
   data?: T
 }
 const request = new Request({
-  baseURL: import.meta.env.VITE_API_URL,
+  baseURL: import.meta.env.VITE_BASE_API,
   timeout: 1000 * 60 * 4,
   withCredentials: false,
   interceptors: {

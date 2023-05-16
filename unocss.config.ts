@@ -7,8 +7,6 @@ import {
   transformerAttributifyJsx,
   transformerDirectives,
   transformerVariantGroup,
-  // transformerDirectives,
-  // transformerVariantGroup,
 } from 'unocss'
 
 export default defineConfig({
