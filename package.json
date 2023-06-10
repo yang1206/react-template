@@ -30,7 +30,7 @@
     "zustand": "^4.3.8"
   },
   "devDependencies": {
-    "@antfu/eslint-config-react": "^0.38.6",
+    "@antfu/eslint-config-react": "^0.39.0",
     "@commitlint/cli": "^17.6.3",
     "@commitlint/config-conventional": "^17.6.3",
     "@iconify-json/carbon": "^1.1.16",
