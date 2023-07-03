@@ -47,7 +47,7 @@
     "cz-git": "^1.6.1",
     "eslint": "^8.40.0",
     "husky": "^8.0.3",
-    "jsdom": "^21.1.2",
+    "jsdom": "^22.0.0",
     "lint-staged": "^13.2.2",
     "typescript": "^5.0.4",
     "unocss": "^0.51.13",
