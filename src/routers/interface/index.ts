@@ -7,6 +7,8 @@ export interface MetaProps {
   key?: string
 }
 export type RouteObject = Routes & {
+  name?: string
   meta?: MetaProps
   isLink?: string
+  auth?: boolean
 }

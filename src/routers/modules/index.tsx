@@ -9,6 +9,7 @@ const routes: RouteObject[] = [
   },
   {
     path: '/count',
+    name: 'Count',
     element: lazyLoad(lazy(() => import('@/pages/Count'))),
   },
 ]
