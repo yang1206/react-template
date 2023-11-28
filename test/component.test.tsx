@@ -3,7 +3,7 @@ import React from 'react'
 import { afterEach, describe, expect, it } from 'vitest'
 import Counter from '../src/pages/Count'
 
-describe('Counter', () => {
+describe('counter', () => {
   afterEach(cleanup)
 
   it('should render', () => {

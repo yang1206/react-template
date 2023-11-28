@@ -1,13 +1,4 @@
-import { useQuery } from '@tanstack/react-query'
-import { getGithub } from '@/api'
-
 export default function Footer() {
-  const { data } = useQuery({
-    queryKey: ['git'],
-    queryFn() {
-      return getGithub()
-    },
-  })
   const { isDark, toggleDark } = useDark()
   return (
     <nav className="mt-6 inline-flex gap-2 text-xl">
@@ -18,7 +9,7 @@ export default function Footer() {
       <a
         className="i-line-md:github-loop icon-btn"
         rel="noreferrer"
-        href={data?.html_url}
+        href="https://github.com/yang1206/uniapp-template"
         target="_blank"
         title="GitHub"
       />

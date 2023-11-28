@@ -1,23 +1,8 @@
-import { useCountStore } from '@/store'
+import Counter from '@/components/Counter'
 
 function Count() {
-  const { count, inc, dec } = useCountStore()
   return (
-    <div>
-      <p className="font-semibold">{count}</p>
-      <button
-        className="m-4 h-8 w-8 rounded-full text-center btn"
-        onClick={inc}
-      >
-        +
-      </button>
-      <button
-        className="m-4 h-8 w-8 rounded-full text-center btn"
-        onClick={dec}
-      >
-        -
-      </button>
-    </div>
+    <Counter />
   )
 }
 export default Count

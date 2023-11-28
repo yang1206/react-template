@@ -1,3 +1,4 @@
+import process from 'node:process'
 import type { ConfigEnv } from 'vitest/config'
 import { defineConfig } from 'vitest/config'
 import { loadEnv } from 'vite'

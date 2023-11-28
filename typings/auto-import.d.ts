@@ -39,6 +39,7 @@ declare global {
   const useParams: typeof import('react-router-dom')['useParams']
   const useReducer: typeof import('react')['useReducer']
   const useRef: typeof import('react')['useRef']
+  const useRefValue: typeof import('../src/hooks/useRefValue')['useRefValue']
   const useResolvedPath: typeof import('react-router-dom')['useResolvedPath']
   const useRoutes: typeof import('react-router-dom')['useRoutes']
   const useSearchParams: typeof import('react-router-dom')['useSearchParams']
@@ -84,6 +85,7 @@ declare module 'vue' {
     readonly useParams: UnwrapRef<typeof import('react-router-dom')['useParams']>
     readonly useReducer: UnwrapRef<typeof import('react')['useReducer']>
     readonly useRef: UnwrapRef<typeof import('react')['useRef']>
+    readonly useRefValue: UnwrapRef<typeof import('../src/hooks/useRefValue')['useRefValue']>
     readonly useResolvedPath: UnwrapRef<typeof import('react-router-dom')['useResolvedPath']>
     readonly useRoutes: UnwrapRef<typeof import('react-router-dom')['useRoutes']>
     readonly useSearchParams: UnwrapRef<typeof import('react-router-dom')['useSearchParams']>
@@ -128,6 +130,7 @@ declare module '@vue/runtime-core' {
     readonly useParams: UnwrapRef<typeof import('react-router-dom')['useParams']>
     readonly useReducer: UnwrapRef<typeof import('react')['useReducer']>
     readonly useRef: UnwrapRef<typeof import('react')['useRef']>
+    readonly useRefValue: UnwrapRef<typeof import('../src/hooks/useRefValue')['useRefValue']>
     readonly useResolvedPath: UnwrapRef<typeof import('react-router-dom')['useResolvedPath']>
     readonly useRoutes: UnwrapRef<typeof import('react-router-dom')['useRoutes']>
     readonly useSearchParams: UnwrapRef<typeof import('react-router-dom')['useSearchParams']>

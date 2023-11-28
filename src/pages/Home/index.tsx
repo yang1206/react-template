@@ -1,9 +1,10 @@
 import { useQuery } from '@tanstack/react-query'
-import { useCountStore } from '@/store'
-import { getGithub } from '@/api'
+import { useAtomValue } from 'jotai'
+import { counterAtom } from '@/atoms/counter'
+import { fetchGithubRepo } from '@/api'
 
 function Content() {
-  const { count } = useCountStore()
+  const count = useAtomValue(counterAtom)
   return (
     <div className="home">
       <div className="i-carbon-campsite inline-block text-4xl" />
@@ -18,19 +19,20 @@ function Content() {
 
       <div className="py-4" />
       <p className="font-semibold">{count}</p>
-      {/* <img src={query.data.archive_url} /> */}
     </div>
   )
 }
 function Home() {
-  const { data, isLoading } = useQuery(['git'], getGithub)
+  const { data, isLoading } = useQuery({
+    ...fetchGithubRepo('yang1206/uniapp-template'),
+  })
   if (isLoading)
     return <div>Loading...</div>
 
   return (
     <>
-     <Content />
-     <a className="block" href={data?.html_url}>{data?.full_name}</a>
+      <Content />
+      <a className="block" href={data?.html_url}>{data?.full_name}</a>
     </>
   )
 }

@@ -6,20 +6,20 @@ const isHash = import.meta.env.VITE_USE_HASH === 'true'
 
 function Element() {
   return (
-   <>
+    <>
       <div className="flex justify-center gap-3">
         <NavLink to="/">Home</NavLink>
         <NavLink to="/count">Count</NavLink>
       </div>
       <Router />
-   </>
+    </>
   )
 }
 
 function Layout() {
   return (
     <>
-    {
+      {
         isHash
           ? (
             <HashRouter>

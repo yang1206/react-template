@@ -1,6 +1,6 @@
 /// <reference types="vite/client" />
 
-type ProxyType = 'dev' | 'test' | 'prod';
+type ProxyType = 'dev' | 'test' | 'prod'
 
 interface ProxyConfig {
   /** 匹配代理的前缀，接口地址匹配到此前缀将代理的target地址 */

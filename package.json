@@ -8,6 +8,9 @@
     "type": "git",
     "url": "git+https://github.com/yang1206/react-template.git"
   },
+  "engines": {
+    "node": "20"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -16,44 +19,52 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "lint:lint-staged": "lint-staged",
-    "prepare": "husky install",
+    "postinstall": "npx simple-git-hooks",
     "commit": "git pull && git add -A && git-cz && git push"
   },
   "dependencies": {
-    "@tanstack/react-query": "^4.32.6",
-    "axios": "1.4.0",
+    "@tanstack/react-query": "^5.8.7",
+    "axios": "1.6.2",
+    "jotai": "^2.6.0",
     "nprogress": "^0.2.0",
+    "qs": "^6.11.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.14.2",
-    "usehooks-ts": "^2.9.1",
-    "zustand": "^4.4.1"
+    "react-router-dom": "^6.20.0",
+    "usehooks-ts": "^2.9.1"
   },
   "devDependencies": {
-    "@antfu/eslint-config-react": "^0.40.0",
-    "@commitlint/cli": "^17.6.7",
-    "@commitlint/config-conventional": "^17.6.7",
-    "@iconify-json/carbon": "^1.1.19",
-    "@iconify-json/line-md": "^1.1.26",
-    "@testing-library/react": "^14.0.0",
-    "@types/node": "^18.17.3",
-    "@types/nprogress": "^0.2.0",
-    "@types/react": "^18.2.18",
-    "@types/react-dom": "^18.2.7",
-    "@unocss/eslint-config": "^0.54.1",
-    "@unocss/reset": "^0.54.1",
-    "@vitejs/plugin-react-swc": "^3.3.2",
+    "@antfu/eslint-config": "^2.1.1",
+    "@commitlint/cli": "^18.4.3",
+    "@commitlint/config-conventional": "^18.4.3",
+    "@iconify-json/carbon": "^1.1.22",
+    "@iconify-json/line-md": "^1.1.33",
+    "@testing-library/react": "^14.1.2",
+    "@types/node": "^20.10.0",
+    "@types/nprogress": "^0.2.3",
+    "@types/qs": "^6.9.10",
+    "@types/react": "^18.2.38",
+    "@types/react-dom": "^18.2.17",
+    "@unocss/eslint-plugin": "^0.57.7",
+    "@unocss/reset": "^0.57.7",
+    "@vitejs/plugin-react-swc": "^3.5.0",
     "commitizen": "^4.3.0",
-    "cz-git": "^1.7.0",
-    "eslint": "^8.46.0",
-    "husky": "^8.0.3",
-    "jsdom": "^22.1.0",
-    "lint-staged": "^13.2.3",
-    "typescript": "^5.1.6",
-    "unocss": "^0.54.1",
-    "unplugin-auto-import": "^0.16.6",
-    "vite": "4.4.9",
-    "vitest": "^0.34.1"
+    "cz-git": "^1.7.1",
+    "eslint": "^8.54.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.4",
+    "jsdom": "^23.0.0",
+    "lint-staged": "^15.1.0",
+    "simple-git-hooks": "^2.9.0",
+    "typescript": "^5.3.2",
+    "unocss": "^0.57.7",
+    "unplugin-auto-import": "^0.17.1",
+    "vite": "5.0.2",
+    "vitest": "^0.34.6"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint:lint-staged"
   },
   "config": {
     "commitizen": {
@@ -64,12 +75,6 @@
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
       "eslint --fix"
-    ]
-  },
-  "eslintConfig": {
-    "extends": [
-      "@antfu/eslint-config-react",
-      "@unocss"
     ]
   }
 }
