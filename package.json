@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "@tanstack/react-query": "^5.8.7",
-    "axios": "1.6.2",
+    "axios": "1.6.3",
     "jotai": "^2.6.0",
     "nprogress": "^0.2.0",
     "qs": "^6.11.2",
