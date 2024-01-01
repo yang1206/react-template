@@ -61,7 +61,7 @@
     "unocss": "^0.57.7",
     "unplugin-auto-import": "^0.17.1",
     "vite": "5.0.10",
-    "vitest": "^0.34.6"
+    "vitest": "^1.0.0"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint:lint-staged"
