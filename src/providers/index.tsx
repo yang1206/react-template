@@ -3,6 +3,7 @@ import React from 'react'
 
 import { JotaiStoreProvider } from './jotai'
 import { ReactQueryProvider } from './react-query'
+import { AppRouterProvider } from './router'
 import { useRefValue } from '@/hooks/useRefValue'
 
 const ProviderComposer: FC<{
@@ -15,7 +16,7 @@ const ProviderComposer: FC<{
 
 export function Providers(props: PropsWithChildren) {
   return (
-    <ProviderComposer contexts={useRefValue(() => [<JotaiStoreProvider key="JotaiStoreProvider" />, <ReactQueryProvider key="react-query" />])}>
+    <ProviderComposer contexts={useRefValue(() => [<JotaiStoreProvider key="JotaiStoreProvider" />, <ReactQueryProvider key="react-query" />, <AppRouterProvider key="router" />])}>
       {props.children}
     </ProviderComposer>
   )

@@ -59,5 +59,6 @@
     "json",
     "jsonc",
     "yaml"
-  ]
+  ],
+  "unot.switchMagic": false
 }

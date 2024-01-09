@@ -1,8 +1,11 @@
-import { useQuery } from '@tanstack/react-query'
 import { useAtomValue } from 'jotai'
+import { FileRoute } from '@tanstack/react-router'
 import { counterAtom } from '@/atoms/counter'
 import { fetchGithubRepo } from '@/api'
 
+export const Route = new FileRoute('/').createRoute({
+  component: Home,
+})
 function Content() {
   const count = useAtomValue(counterAtom)
   return (
@@ -14,17 +17,17 @@ function Content() {
         </a>
       </p>
       <p>
-        <em className="text-sm op75">Opinionated Vite Starter Template</em>
+        <em className="text-sm opacity-75">Opinionated Vite Starter Template</em>
       </p>
 
       <div className="py-4" />
-      <p className="font-semibold">{count}</p>
+      <p className="font-mono font-semibold">{count}</p>
     </div>
   )
 }
 function Home() {
-  const { data, isLoading } = useQuery({
-    ...fetchGithubRepo('yang1206/uniapp-template'),
+  const { data, isLoading } = fetchGithubRepo({
+    variables: { repo: 'yang1206/react-template' },
   })
   if (isLoading)
     return <div>Loading...</div>
@@ -36,4 +39,3 @@ function Home() {
     </>
   )
 }
-export default Home

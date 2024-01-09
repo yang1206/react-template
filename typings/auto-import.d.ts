@@ -51,12 +51,6 @@ declare global {
 import { UnwrapRef } from 'vue'
 declare module 'vue' {
   interface ComponentCustomProperties {
-    readonly Link: UnwrapRef<typeof import('react-router-dom')['Link']>
-    readonly NavLink: UnwrapRef<typeof import('react-router-dom')['NavLink']>
-    readonly Navigate: UnwrapRef<typeof import('react-router-dom')['Navigate']>
-    readonly Outlet: UnwrapRef<typeof import('react-router-dom')['Outlet']>
-    readonly Route: UnwrapRef<typeof import('react-router-dom')['Route']>
-    readonly Routes: UnwrapRef<typeof import('react-router-dom')['Routes']>
     readonly createRef: UnwrapRef<typeof import('react')['createRef']>
     readonly forwardRef: UnwrapRef<typeof import('react')['forwardRef']>
     readonly lazy: UnwrapRef<typeof import('react')['lazy']>
@@ -69,26 +63,14 @@ declare module 'vue' {
     readonly useDebugValue: UnwrapRef<typeof import('react')['useDebugValue']>
     readonly useDeferredValue: UnwrapRef<typeof import('react')['useDeferredValue']>
     readonly useEffect: UnwrapRef<typeof import('react')['useEffect']>
-    readonly useHref: UnwrapRef<typeof import('react-router-dom')['useHref']>
     readonly useId: UnwrapRef<typeof import('react')['useId']>
     readonly useImperativeHandle: UnwrapRef<typeof import('react')['useImperativeHandle']>
-    readonly useInRouterContext: UnwrapRef<typeof import('react-router-dom')['useInRouterContext']>
     readonly useInsertionEffect: UnwrapRef<typeof import('react')['useInsertionEffect']>
     readonly useLayoutEffect: UnwrapRef<typeof import('react')['useLayoutEffect']>
-    readonly useLinkClickHandler: UnwrapRef<typeof import('react-router-dom')['useLinkClickHandler']>
-    readonly useLocation: UnwrapRef<typeof import('react-router-dom')['useLocation']>
     readonly useMemo: UnwrapRef<typeof import('react')['useMemo']>
-    readonly useNavigate: UnwrapRef<typeof import('react-router-dom')['useNavigate']>
-    readonly useNavigationType: UnwrapRef<typeof import('react-router-dom')['useNavigationType']>
-    readonly useOutlet: UnwrapRef<typeof import('react-router-dom')['useOutlet']>
-    readonly useOutletContext: UnwrapRef<typeof import('react-router-dom')['useOutletContext']>
-    readonly useParams: UnwrapRef<typeof import('react-router-dom')['useParams']>
     readonly useReducer: UnwrapRef<typeof import('react')['useReducer']>
     readonly useRef: UnwrapRef<typeof import('react')['useRef']>
     readonly useRefValue: UnwrapRef<typeof import('../src/hooks/useRefValue')['useRefValue']>
-    readonly useResolvedPath: UnwrapRef<typeof import('react-router-dom')['useResolvedPath']>
-    readonly useRoutes: UnwrapRef<typeof import('react-router-dom')['useRoutes']>
-    readonly useSearchParams: UnwrapRef<typeof import('react-router-dom')['useSearchParams']>
     readonly useState: UnwrapRef<typeof import('react')['useState']>
     readonly useSyncExternalStore: UnwrapRef<typeof import('react')['useSyncExternalStore']>
     readonly useTransition: UnwrapRef<typeof import('react')['useTransition']>
@@ -96,12 +78,6 @@ declare module 'vue' {
 }
 declare module '@vue/runtime-core' {
   interface ComponentCustomProperties {
-    readonly Link: UnwrapRef<typeof import('react-router-dom')['Link']>
-    readonly NavLink: UnwrapRef<typeof import('react-router-dom')['NavLink']>
-    readonly Navigate: UnwrapRef<typeof import('react-router-dom')['Navigate']>
-    readonly Outlet: UnwrapRef<typeof import('react-router-dom')['Outlet']>
-    readonly Route: UnwrapRef<typeof import('react-router-dom')['Route']>
-    readonly Routes: UnwrapRef<typeof import('react-router-dom')['Routes']>
     readonly createRef: UnwrapRef<typeof import('react')['createRef']>
     readonly forwardRef: UnwrapRef<typeof import('react')['forwardRef']>
     readonly lazy: UnwrapRef<typeof import('react')['lazy']>
@@ -114,26 +90,14 @@ declare module '@vue/runtime-core' {
     readonly useDebugValue: UnwrapRef<typeof import('react')['useDebugValue']>
     readonly useDeferredValue: UnwrapRef<typeof import('react')['useDeferredValue']>
     readonly useEffect: UnwrapRef<typeof import('react')['useEffect']>
-    readonly useHref: UnwrapRef<typeof import('react-router-dom')['useHref']>
     readonly useId: UnwrapRef<typeof import('react')['useId']>
     readonly useImperativeHandle: UnwrapRef<typeof import('react')['useImperativeHandle']>
-    readonly useInRouterContext: UnwrapRef<typeof import('react-router-dom')['useInRouterContext']>
     readonly useInsertionEffect: UnwrapRef<typeof import('react')['useInsertionEffect']>
     readonly useLayoutEffect: UnwrapRef<typeof import('react')['useLayoutEffect']>
-    readonly useLinkClickHandler: UnwrapRef<typeof import('react-router-dom')['useLinkClickHandler']>
-    readonly useLocation: UnwrapRef<typeof import('react-router-dom')['useLocation']>
     readonly useMemo: UnwrapRef<typeof import('react')['useMemo']>
-    readonly useNavigate: UnwrapRef<typeof import('react-router-dom')['useNavigate']>
-    readonly useNavigationType: UnwrapRef<typeof import('react-router-dom')['useNavigationType']>
-    readonly useOutlet: UnwrapRef<typeof import('react-router-dom')['useOutlet']>
-    readonly useOutletContext: UnwrapRef<typeof import('react-router-dom')['useOutletContext']>
-    readonly useParams: UnwrapRef<typeof import('react-router-dom')['useParams']>
     readonly useReducer: UnwrapRef<typeof import('react')['useReducer']>
     readonly useRef: UnwrapRef<typeof import('react')['useRef']>
     readonly useRefValue: UnwrapRef<typeof import('../src/hooks/useRefValue')['useRefValue']>
-    readonly useResolvedPath: UnwrapRef<typeof import('react-router-dom')['useResolvedPath']>
-    readonly useRoutes: UnwrapRef<typeof import('react-router-dom')['useRoutes']>
-    readonly useSearchParams: UnwrapRef<typeof import('react-router-dom')['useSearchParams']>
     readonly useState: UnwrapRef<typeof import('react')['useState']>
     readonly useSyncExternalStore: UnwrapRef<typeof import('react')['useSyncExternalStore']>
     readonly useTransition: UnwrapRef<typeof import('react')['useTransition']>
