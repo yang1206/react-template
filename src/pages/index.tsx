@@ -1,9 +1,9 @@
 import { useAtomValue } from 'jotai'
-import { FileRoute } from '@tanstack/react-router'
+import { createFileRoute } from '@tanstack/react-router'
 import { counterAtom } from '@/atoms/counter'
 import { fetchGithubRepo } from '@/api'
 
-export const Route = new FileRoute('/').createRoute({
+export const Route = createFileRoute('/')({
   component: Home,
 })
 function Content() {

@@ -50,6 +50,7 @@ declare global {
 // for vue template auto import
 import { UnwrapRef } from 'vue'
 declare module 'vue' {
+  interface GlobalComponents {}
   interface ComponentCustomProperties {
     readonly createRef: UnwrapRef<typeof import('react')['createRef']>
     readonly forwardRef: UnwrapRef<typeof import('react')['forwardRef']>
@@ -77,6 +78,7 @@ declare module 'vue' {
   }
 }
 declare module '@vue/runtime-core' {
+  interface GlobalComponents {}
   interface ComponentCustomProperties {
     readonly createRef: UnwrapRef<typeof import('react')['createRef']>
     readonly forwardRef: UnwrapRef<typeof import('react')['forwardRef']>

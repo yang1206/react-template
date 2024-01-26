@@ -2,7 +2,12 @@ import antfu from '@antfu/eslint-config'
 import pluginTailwind from 'eslint-plugin-tailwindcss'
 
 export default antfu({
-  typescript: true,
+  typescript: {
+    filesTypeAware: [
+      '**\/*.{ts,tsx}',
+      '**\/*.config.{ts,js}',
+    ],
+  },
   vue: false,
   react: {
     overrides: {
