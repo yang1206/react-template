@@ -18,8 +18,9 @@
     "test": "vitest",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "lint:lint-staged": "lint-staged",
+    "lint:lint-staged": "pnpm type-check && lint-staged",
     "postinstall": "npx simple-git-hooks",
+    "type-check": "tsc  --noemit",
     "commit": "git pull && git add -A && git-cz && git push"
   },
   "dependencies": {

@@ -9,6 +9,7 @@ export default antfu({
     ],
   },
   vue: false,
+  ignores: ['src/router.ts'],
   react: {
     overrides: {
       'react/destructuring-assignment': 'off', // Vscode doesn't support automatically destructuring, it's a pain to add a new variable

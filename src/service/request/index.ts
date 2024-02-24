@@ -69,7 +69,7 @@ class Request {
    * @param {string} url
    * @returns {*}
    */
-  private delUrl(url: string) {
+  private delUrl(url: string): void {
     const urlIndex = this.requestUrlList?.findIndex(u => u === url)
     const sourceIndex = this.getSourceIndex(url)
     // 删除url和cancel方法

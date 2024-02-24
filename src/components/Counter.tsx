@@ -12,13 +12,13 @@ export default function Counter() {
     <div>
       <p className="font-semibold">{count}</p>
       <button
-        className="m-4 h-8 w-8 rounded-full text-center btn"
+        className="btn m-4 size-8 rounded-full text-center"
         onClick={increment}
       >
         +
       </button>
       <button
-        className="m-4 h-8 w-8 rounded-full text-center btn"
+        className="btn m-4 size-8 rounded-full text-center"
         onClick={decrement}
       >
         -
