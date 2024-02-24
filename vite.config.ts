@@ -2,9 +2,9 @@ import process from 'node:process'
 import type { ConfigEnv } from 'vitest/config'
 import { defineConfig } from 'vitest/config'
 import { loadEnv } from 'vite'
-import { createViteProxy } from './build/config'
-import { setupVitePlugins } from './build/plugins'
-import { convertEnv, getRootPath, getSrcPath } from './build/utils'
+import { createViteProxy } from './config/proxy'
+import { setupVitePlugins } from './config/plugins'
+import { convertEnv, getRootPath, getSrcPath } from './config/utils'
 
 // https://vitejs.dev/config/
 export default defineConfig((configEnv: ConfigEnv) => {
