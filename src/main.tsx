@@ -1,14 +1,15 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App'
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
 import '@/styles/main.css'
-import 'uno.css'
+import { Routes } from '@generouted/react-router'
 import { Providers } from './providers'
 
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  <React.StrictMode>
+const app = createRoot(document.getElementById('root')!)
+
+app.render(
+  <StrictMode>
     <Providers>
-      <App />
+      <Routes />
     </Providers>
-  </React.StrictMode>,
+  </StrictMode>,
 )

@@ -8,11 +8,9 @@
       "ESNext"
     ],
     "useDefineForClassFields": true,
-    // 解析非相对模块名的基准目录
     "baseUrl": "./",
     "module": "ESNext",
-    "moduleResolution": "Node",
-    // 模块名到基于 baseUrl的路径映射的列表。
+    "moduleResolution": "Bundler",
     "paths": {
       "@": [
         "src"
@@ -23,18 +21,12 @@
     },
     "resolveJsonModule": true,
     "allowJs": false,
-    /* Strict Type-Checking Options */
-    "strict": true /* Enable all strict type-checking options. */, /* Raise error on expressions and declarations with an implied 'any' type. */
+    "strict": true,
     "strictNullChecks": true,
     "noImplicitAny": false,
     "noEmit": true,
     "allowSyntheticDefaultImports": true,
-    "esModuleInterop": false, /* Enable strict null checks. */
-    // "strictFunctionTypes": true,           /* Enable strict checking of function types. */
-    // "strictBindCallApply": true,           /* Enable strict 'bind', 'call', and 'apply' methods on functions. */
-    // "strictPropertyInitialization": true,  /* Enable strict checking of property initialization in classes. */
-    // "noImplicitThis": true,                /* Raise error on 'this' expressions with an implied 'any' type. */
-    // "alwaysStrict": true,                  /* Parse in strict mode and emit "use strict" for each source file. */
+    "esModuleInterop": false,
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
     "skipLibCheck": true

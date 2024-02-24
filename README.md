@@ -10,16 +10,12 @@ Inspired by [Vitesse](https://github.com/antfu/vitesse) ❤
 
 - ⚡️ [React 18](https://github.com/facebook/react), [Vite 4](https://github.com/vitejs/vite), [pnpm](https://pnpm.io/), [ESBuild](https://github.com/evanw/esbuild) - born with fastness
 
-- 📑 [Layout system](./src/layouts)
-
-- 🎨 [UnoCSS](https://github.com/antfu/unocss) - the instant on-demand atomic CSS engine
-- 😃 [Use icons from any icon sets with classes](https://github.com/antfu/unocss/tree/main/packages/preset-icons)
-
-- 🐻 [State Management via Zustand](https://github.com/pmndrs/zustand)
-
+- 🗂 [File based routing](./src/pages)
+- 🤖 [React-router-dom + generouted](https://github.com/oedotme/generouted#readme) Generated file-based routes for React Router and Vite
+- 🎨 [TailwindCSS](https://tailwindcss.com/) - A utility-first CSS framework for rapid UI development.
+- 😃 [Use icons from any icon sets with classes](https://github.com/egoist/tailwindcss-icons)
+- 👻 [State Management via Jotai](https://github.com/pmndrs/jotai)
 - 📥 [APIs auto importing](https://github.com/antfu/unplugin-auto-import) - use Hooks API and others directly
-
-<!-- - 🖨 Static-site generation (SSG) via [vite-ssg](https://github.com/antfu/vite-ssg) -->
 - 🤖 [React-Query](https://github.com/TanStack/query) - fetch, cache, synchronize and update data easily
 
 - 🦾 TypeScript, of course
