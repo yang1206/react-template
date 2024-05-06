@@ -19,7 +19,6 @@ function Content() {
       <p>
         <em className="text-sm opacity-75">Opinionated Vite Starter Template</em>
       </p>
-
       <div className="py-4" />
       <p className="font-mono font-semibold">{count}</p>
     </div>
