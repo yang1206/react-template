@@ -59,7 +59,7 @@ importers:
         version: 1.1.36
       '@iconify-json/line-md':
         specifier: ^1.1.37
-        version: 1.1.37
+        version: 1.1.38
       '@tanstack/react-query-devtools':
         specifier: ^5.35.1
         version: 5.35.1(@tanstack/react-query@5.35.1(react@18.3.1))(react@18.3.1)
@@ -710,8 +710,8 @@ packages:
   '@iconify-json/carbon@1.1.36':
     resolution: {integrity: sha512-NC3VcqLtwLZpi7+LeXj+99/byv+asrnCQxiDNCZV6hKr9WcNh6C25kJguJYfN+dV54kOkw78e+6PitQi2Bppnw==}
 
-  '@iconify-json/line-md@1.1.37':
-    resolution: {integrity: sha512-qGezTafsQOX4N2STOV0gsSw/vr0u7DPXtg0jpVQTIa9ht1IXN68O+Qy7Ia2dHbuW4w5nz3UyhJzNrh7NB5T7BA==}
+  '@iconify-json/line-md@1.1.38':
+    resolution: {integrity: sha512-W+y4G/7QqO1sTGUypwsm0UUwjbGt/BjRg4kZylek7BwH5EG8f1uUJgcZwRASjsH4xGL+LVQbw6FAGbQ1UHNCow==}
 
   '@iconify/types@2.0.0':
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
@@ -4505,7 +4505,7 @@ snapshots:
     dependencies:
       '@iconify/types': 2.0.0
 
-  '@iconify-json/line-md@1.1.37':
+  '@iconify-json/line-md@1.1.38':
     dependencies:
       '@iconify/types': 2.0.0
 
