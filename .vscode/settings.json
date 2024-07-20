@@ -1,11 +1,10 @@
 {
-  "eslint.experimental.useFlatConfig": true,
   // Disable the default formatter, use eslint instead
   "prettier.enable": false,
   "editor.formatOnSave": false,
   // Auto fix
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "always",
+    "source.fixAll.eslint": "explicit",
     "source.organizeImports": "never"
   },
   // Silent the stylistic rules in you IDE, but still auto fix them
@@ -59,6 +58,5 @@
     "json",
     "jsonc",
     "yaml"
-  ],
-  "unot.switchMagic": false
+  ]
 }
