@@ -2,7 +2,7 @@ import type { Config } from 'tailwindcss'
 import { dynamicIconsPlugin, getIconCollections, iconsPlugin } from '@egoist/tailwindcss-icons'
 
 export default {
-  darkMode: ['class'],
+  darkMode: 'class',
   content: ['./src/**/*.{jsx,tsx}'],
   theme: {
     extend: {
@@ -21,7 +21,7 @@ export default {
       // You can also ignore this option to automatically discover all icon collections you have installed
       collections: getIconCollections(['line-md', 'carbon']),
       scale: 1.25,
-    }),
+    }) as any,
     dynamicIconsPlugin(),
   ],
 } satisfies Config
