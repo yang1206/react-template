@@ -12,7 +12,7 @@ function Content() {
     <div className="home">
       <div className="i-carbon-campsite inline-block text-4xl" />
       <p>
-        <a rel="noreferrer" href="https://github.com/yang1206/react-template" target="_blank">
+        <a  rel="noreferrer" href="https://github.com/yang1206/react-template" target="_blank">
           Vitesse Lite for React
         </a>
       </p>

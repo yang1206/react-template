@@ -24,7 +24,6 @@ export function useDark() {
       Math.max(x, innerWidth - x),
       Math.max(y, innerHeight - y),
     )
-    // @ts-expect-error experimental API
     const transition = document.startViewTransition(async () => {
       toggle()
     })
