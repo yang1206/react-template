@@ -42,7 +42,7 @@
     "@eslint-react/eslint-plugin": "^1.17.1",
     "@iconify-json/carbon": "^1.2.4",
     "@iconify-json/line-md": "^1.2.2",
-    "@tailwindcss/vite": "4.0.0-beta.4",
+    "@tailwindcss/vite": "4.0.1",
     "@tanstack/react-query-devtools": "^5.62.0",
     "@tanstack/router-devtools": "^1.85.0",
     "@tanstack/router-vite-plugin": "^1.84.4",
