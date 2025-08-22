@@ -1,6 +1,6 @@
 import qs from 'qs'
-import Request from './request'
 import { DefaultBaseUrl, DefaultHeaders } from '@/constants'
+import Request from './request'
 
 const request = new Request({
   baseURL: DefaultBaseUrl,

@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import '@/styles/main.css'
 import { Providers } from './providers'
+import '@/styles/main.css'
 
 const rootElement = document.getElementById('root')
 

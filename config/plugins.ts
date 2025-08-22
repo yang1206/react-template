@@ -1,8 +1,8 @@
-import { resolve } from 'node:path'
 import type { PluginOption } from 'vite'
-import react from '@vitejs/plugin-react-swc'
-import { TanStackRouterVite } from '@tanstack/router-vite-plugin'
+import { resolve } from 'node:path'
 import tailwind from '@tailwindcss/vite'
+import { TanStackRouterVite } from '@tanstack/router-vite-plugin'
+import react from '@vitejs/plugin-react-swc'
 import AutoImport from 'unplugin-auto-import/vite'
 import { getRootPath, getSrcPath } from './utils'
 

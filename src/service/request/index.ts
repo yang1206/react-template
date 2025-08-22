@@ -1,6 +1,6 @@
-import axios from 'axios'
 import type { AxiosInstance, AxiosResponse, InternalAxiosRequestConfig } from 'axios'
 import type { CancelRequestSource, RequestInterceptors } from './types'
+import axios from 'axios'
 
 class Request {
   // axios 实例

@@ -38,12 +38,12 @@ export interface CancelRequestSource {
 type IAxiosShowErrorType_ = 'dialog' | 'message' | 'notification'
 
 export type {
-  IAxiosShowErrorType_ as IAxiosShowErrorType,
-  IAxiosResponseData_ as IAxiosResponseData,
+  IAxiosError_ as IAxiosError,
+  IAxiosPromise_ as IAxiosPromise,
   IAxiosRequestConfig_ as IAxiosRequestConfig,
   IAxiosResponse_ as IAxiosResponse,
-  IAxiosPromise_ as IAxiosPromise,
-  IAxiosError_ as IAxiosError,
+  IAxiosResponseData_ as IAxiosResponseData,
+  IAxiosShowErrorType_ as IAxiosShowErrorType,
 }
 
 declare global {

@@ -1,12 +1,11 @@
 import antfu from '@antfu/eslint-config'
-import pluginTailwind from 'eslint-plugin-tailwindcss'
 
 export default antfu({
   vue: false,
   stylistic: {
     overrides: {
-      'style/jsx-self-closing-comp': 'error'
-    }
+      'style/jsx-self-closing-comp': 'error',
+    },
   },
   react: {
     overrides: {
@@ -16,19 +15,9 @@ export default antfu({
     },
   },
 }, {
-  name: 'tailwindcss',
-  files: ['**/*.ts', '**/*.tsx', '**/*.jsx'],
-  plugins: {
-    tailwindcss: pluginTailwind,
-  },
-  rules: {
-    ...pluginTailwind.configs.recommended.rules,
-    'tailwindcss/classnames-order': [
-      'warn',
-      {
-        officialSorting: true,
-      },
-    ], // Follow the same ordering as the official plugin `prettier-plugin-tailwindcss`
-    'tailwindcss/no-custom-classname': 'off',
+  settings: {
+    'better-tailwindcss': {
+      entryPoint: 'src/styles/main.css',
+    },
   },
 })
