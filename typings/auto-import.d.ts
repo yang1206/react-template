@@ -6,47 +6,57 @@
 // biome-ignore lint: disable
 export {}
 declare global {
+  const Activity: typeof import('react').Activity
+  const Fragment: typeof import('react').Fragment
   const Link: typeof import('react-router-dom')['Link']
   const NavLink: typeof import('react-router-dom')['NavLink']
   const Navigate: typeof import('react-router-dom')['Navigate']
   const Outlet: typeof import('react-router-dom')['Outlet']
   const Route: typeof import('react-router-dom')['Route']
   const Routes: typeof import('react-router-dom')['Routes']
-  const createRef: typeof import('react')['createRef']
-  const forwardRef: typeof import('react')['forwardRef']
-  const lazy: typeof import('react')['lazy']
-  const memo: typeof import('react')['memo']
-  const startTransition: typeof import('react')['startTransition']
-  const useCallback: typeof import('react')['useCallback']
-  const useContext: typeof import('react')['useContext']
-  const useDark: typeof import('../src/hooks/useDark')['useDark']
-  const useDarkMode: typeof import('usehooks-ts')['useDarkMode']
-  const useDebugValue: typeof import('react')['useDebugValue']
-  const useDeferredValue: typeof import('react')['useDeferredValue']
-  const useEffect: typeof import('react')['useEffect']
+  const Suspense: typeof import('react').Suspense
+  const cache: typeof import('react').cache
+  const cacheSignal: typeof import('react').cacheSignal
+  const createContext: typeof import('react').createContext
+  const createRef: typeof import('react').createRef
+  const forwardRef: typeof import('react').forwardRef
+  const lazy: typeof import('react').lazy
+  const memo: typeof import('react').memo
+  const startTransition: typeof import('react').startTransition
+  const use: typeof import('react').use
+  const useActionState: typeof import('react').useActionState
+  const useCallback: typeof import('react').useCallback
+  const useContext: typeof import('react').useContext
+  const useDark: typeof import('../src/hooks/useDark').useDark
+  const useDarkMode: typeof import('usehooks-ts').useDarkMode
+  const useDebugValue: typeof import('react').useDebugValue
+  const useDeferredValue: typeof import('react').useDeferredValue
+  const useEffect: typeof import('react').useEffect
+  const useEffectEvent: typeof import('react').useEffectEvent
   const useHref: typeof import('react-router-dom')['useHref']
-  const useId: typeof import('react')['useId']
-  const useImperativeHandle: typeof import('react')['useImperativeHandle']
+  const useId: typeof import('react').useId
+  const useImperativeHandle: typeof import('react').useImperativeHandle
   const useInRouterContext: typeof import('react-router-dom')['useInRouterContext']
-  const useInsertionEffect: typeof import('react')['useInsertionEffect']
-  const useLayoutEffect: typeof import('react')['useLayoutEffect']
+  const useInsertionEffect: typeof import('react').useInsertionEffect
+  const useLayoutEffect: typeof import('react').useLayoutEffect
   const useLinkClickHandler: typeof import('react-router-dom')['useLinkClickHandler']
   const useLocation: typeof import('react-router-dom')['useLocation']
-  const useMemo: typeof import('react')['useMemo']
+  const useMemo: typeof import('react').useMemo
   const useNavigate: typeof import('react-router-dom')['useNavigate']
   const useNavigationType: typeof import('react-router-dom')['useNavigationType']
+  const useOptimistic: typeof import('react').useOptimistic
   const useOutlet: typeof import('react-router-dom')['useOutlet']
   const useOutletContext: typeof import('react-router-dom')['useOutletContext']
   const useParams: typeof import('react-router-dom')['useParams']
-  const useReducer: typeof import('react')['useReducer']
-  const useRef: typeof import('react')['useRef']
-  const useRefValue: typeof import('../src/hooks/useRefValue')['useRefValue']
+  const useReducer: typeof import('react').useReducer
+  const useRef: typeof import('react').useRef
+  const useRefValue: typeof import('../src/hooks/useRefValue').useRefValue
   const useResolvedPath: typeof import('react-router-dom')['useResolvedPath']
   const useRoutes: typeof import('react-router-dom')['useRoutes']
   const useSearchParams: typeof import('react-router-dom')['useSearchParams']
-  const useState: typeof import('react')['useState']
-  const useSyncExternalStore: typeof import('react')['useSyncExternalStore']
-  const useTransition: typeof import('react')['useTransition']
+  const useState: typeof import('react').useState
+  const useSyncExternalStore: typeof import('react').useSyncExternalStore
+  const useTransition: typeof import('react').useTransition
 }
 
 // for vue template auto import
@@ -54,11 +64,19 @@ import { UnwrapRef } from 'vue'
 declare module 'vue' {
   interface GlobalComponents {}
   interface ComponentCustomProperties {
+    readonly Activity: UnwrapRef<typeof import('react')['Activity']>
+    readonly Fragment: UnwrapRef<typeof import('react')['Fragment']>
+    readonly Suspense: UnwrapRef<typeof import('react')['Suspense']>
+    readonly cache: UnwrapRef<typeof import('react')['cache']>
+    readonly cacheSignal: UnwrapRef<typeof import('react')['cacheSignal']>
+    readonly createContext: UnwrapRef<typeof import('react')['createContext']>
     readonly createRef: UnwrapRef<typeof import('react')['createRef']>
     readonly forwardRef: UnwrapRef<typeof import('react')['forwardRef']>
     readonly lazy: UnwrapRef<typeof import('react')['lazy']>
     readonly memo: UnwrapRef<typeof import('react')['memo']>
     readonly startTransition: UnwrapRef<typeof import('react')['startTransition']>
+    readonly use: UnwrapRef<typeof import('react')['use']>
+    readonly useActionState: UnwrapRef<typeof import('react')['useActionState']>
     readonly useCallback: UnwrapRef<typeof import('react')['useCallback']>
     readonly useContext: UnwrapRef<typeof import('react')['useContext']>
     readonly useDark: UnwrapRef<typeof import('../src/hooks/useDark')['useDark']>
@@ -66,11 +84,13 @@ declare module 'vue' {
     readonly useDebugValue: UnwrapRef<typeof import('react')['useDebugValue']>
     readonly useDeferredValue: UnwrapRef<typeof import('react')['useDeferredValue']>
     readonly useEffect: UnwrapRef<typeof import('react')['useEffect']>
+    readonly useEffectEvent: UnwrapRef<typeof import('react')['useEffectEvent']>
     readonly useId: UnwrapRef<typeof import('react')['useId']>
     readonly useImperativeHandle: UnwrapRef<typeof import('react')['useImperativeHandle']>
     readonly useInsertionEffect: UnwrapRef<typeof import('react')['useInsertionEffect']>
     readonly useLayoutEffect: UnwrapRef<typeof import('react')['useLayoutEffect']>
     readonly useMemo: UnwrapRef<typeof import('react')['useMemo']>
+    readonly useOptimistic: UnwrapRef<typeof import('react')['useOptimistic']>
     readonly useReducer: UnwrapRef<typeof import('react')['useReducer']>
     readonly useRef: UnwrapRef<typeof import('react')['useRef']>
     readonly useRefValue: UnwrapRef<typeof import('../src/hooks/useRefValue')['useRefValue']>

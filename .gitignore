@@ -19,4 +19,4 @@ dist-ssr
 *.ntvs*
 *.njsproj
 *.sln
-*.sw?
+src/routes/routeTree.gen.ts
