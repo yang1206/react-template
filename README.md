@@ -1,3 +1,5 @@
+
+
 🚀🚀🚀 react starter template
 
 <p align='center'>
@@ -43,6 +45,12 @@ pnpm dev
 
 ```
 pnpm  build
+```
+
+### Runs unit tests
+
+```
+pnpm test
 ```
 
 ## Variations
